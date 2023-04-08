@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "713698903118",
+    "firebase_url": "https://vaulted-journal-371519-default-rtdb.firebaseio.com",
+    "project_id": "vaulted-journal-371519",
+    "storage_bucket": "vaulted-journal-371519.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:713698903118:android:1124f505808b0402c1af1f",
+        "android_client_info": {
+          "package_name": "com.example.funjo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "713698903118-j2bdt6auovhvvnag2b2p0mniocg3528n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.funjo",
+            "certificate_hash": "fab075aebac6870b7cede6923f5cdfa3a422f5aa"
+          }
+        },
+        {
+          "client_id": "713698903118-20lmumhfahgp8t3hjsi2of0hpum0180d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSfG2ZP7flb0hcBR5kvEYgl8deThLds8M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "713698903118-20lmumhfahgp8t3hjsi2of0hpum0180d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
