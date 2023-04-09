@@ -124,22 +124,9 @@ class ProfileFragment extends Fragment {
                                 @Override
                                 public
                                 void onComplete(@NonNull Task<Uri> task) {
-//                                    Users users = new Users(User_name,User_email,task.getResult().getUser().getUid(),"",0);
                                     String id = mauth.getCurrentUser().getUid();
-                                    database.getReference().child("Myreels/" + id).push().child(task.getResult().toString()).addValueEventListener(new ValueEventListener() {
-                                        @Override
-                                        public
-                                        void onDataChange(@NonNull DataSnapshot snapshot) {
-//                                           Reference().child("user/"+id+"/posts").setValue(posts);
-                                            Log.e(TAG, "onDataChange: " + snapshot.getChildren().toString());
-                                        }
+                              FirebaseDatabase.getInstance().getReference("Reels").push().setValue(task.getResult().toString());
 
-                                        @Override
-                                        public
-                                        void onCancelled(@NonNull DatabaseError error) {
-
-                                        }
-                                    });
                                 }
                             });
                         } else {

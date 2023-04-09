@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#fff0"
+
     tools:context=".Fragments.HomeFragment">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -16,13 +16,23 @@
 
     <com.google.android.material.tabs.TabLayout
         android:layout_width="match_parent"
-        android:id="@+id/tabLayoutID"
-
+        android:fontFamily="@font/ubuntu_regular"
+        android:id="@+id/toolbarHome"
         android:background="@color/white"
         app:tabGravity="fill"
+        android:text="@color/black"
         app:tabMode="fixed"
         android:layout_height="match_parent"/>
     </com.google.android.material.appbar.AppBarLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Your Idea Our Platform"
+        android:textColor="@color/black"
+        android:textSize="60dp"
+        android:fontFamily="@font/ubuntu_regular"
+
+        android:gravity="center"/>
 
 
 </FrameLayout>

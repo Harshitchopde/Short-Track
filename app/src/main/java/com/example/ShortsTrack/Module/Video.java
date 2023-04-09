@@ -2,25 +2,28 @@ package com.example.ShortsTrack.Module;
 
 public
 class Video {
-private String VideoUrl,title,desc;
+private String videoUrl,title,desc;
 private int likes;
 
     public
     Video(String videoUrl, String title, String desc, int likes) {
-        VideoUrl = videoUrl;
+        this.videoUrl = videoUrl;
         this.title = title;
         this.desc = desc;
         this.likes = likes;
     }
+    public Video(String videoUrl){
+        this.videoUrl = videoUrl;
+    }
 
     public
     String getVideoUrl() {
-        return VideoUrl;
+        return videoUrl;
     }
 
     public
     void setVideoUrl(String videoUrl) {
-        VideoUrl = videoUrl;
+        this.videoUrl = videoUrl;
     }
 
     public

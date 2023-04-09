@@ -98,6 +98,14 @@ public class SignUpActivity extends AppCompatActivity {
                             public
                             void onSuccess(Void unused) {
                                 Toast.makeText(SignUpActivity.this, "Successfull", Toast.LENGTH_SHORT).show();
+                                database.getReference("Myreels/"+id).push().setValue("").addOnSuccessListener(new OnSuccessListener<Void>() {
+                                    @Override
+                                    public
+                                    void onSuccess(Void unused) {
+                                        Toast.makeText(SignUpActivity.this, "online storage created", Toast.LENGTH_SHORT).show();
+                                        Log.e(TAG, "onSuccess: "+"online storage created" );
+                                    }
+                                });
                             }
                         }).addOnFailureListener(new OnFailureListener() {
                             @Override

@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toolbar;
 
 import com.example.ShortsTrack.R;
 
@@ -14,7 +15,7 @@ import com.example.ShortsTrack.R;
 public
 class HomeFragment extends Fragment {
 
-
+Toolbar toolbar;
     public
     HomeFragment() {
         // Required empty public constructor
@@ -27,6 +28,8 @@ class HomeFragment extends Fragment {
     View onCreateView(LayoutInflater inflater, ViewGroup container,
                       Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
+//        toolbar.setTitle("ShortsTrack");
 
 
 
