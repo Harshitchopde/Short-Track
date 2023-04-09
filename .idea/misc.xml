@@ -3,6 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/ShortsTrack/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.2345" />
+        <entry key="..\:/ShortsTrack/app/src/main/res/drawable/ic_oip.xml" value="0.2345" />
+        <entry key="..\:/ShortsTrack/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/ShortsTrack/app/src/main/res/layout/activity_main.xml" value="0.23229166666666667" />
+        <entry key="..\:/ShortsTrack/app/src/main/res/layout/activity_profile_update.xml" value="0.23229166666666667" />
+        <entry key="..\:/ShortsTrack/app/src/main/res/layout/activity_sign_up.xml" value="0.1" />
+        <entry key="..\:/ShortsTrack/app/src/main/res/layout/each_reel_demo.xml" value="0.23229166666666667" />
+        <entry key="..\:/ShortsTrack/app/src/main/res/layout/fragment_home.xml" value="0.23229166666666667" />
+        <entry key="..\:/ShortsTrack/app/src/main/res/layout/fragment_live.xml" value="0.23229166666666667" />
+        <entry key="..\:/ShortsTrack/app/src/main/res/layout/fragment_profile.xml" value="0.23229166666666667" />
+        <entry key="..\:/ShortsTrack/app/src/main/res/layout/shortstrack.xml" value="0.23125" />
+        <entry key="..\:/ShortsTrack/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.1" />
         <entry key="..\:/funjo/app/src/main/res/font/gvtime.xml" value="0.26145833333333335" />
         <entry key="..\:/funjo/app/src/main/res/layout/activity_login.xml" value="0.23229166666666667" />
         <entry key="..\:/funjo/app/src/main/res/layout/activity_main.xml" value="0.23229166666666667" />

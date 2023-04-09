@@ -35,7 +35,7 @@
             <ImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/demoimg"
+                android:src="@drawable/logoimg"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -80,6 +80,7 @@
             android:hint="Password"
             android:textColorHint="@color/black"
             app:boxStrokeColor="@color/black"
+
             app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText

@@ -1,10 +1,13 @@
 package com.example.ShortsTrack.LoginRegister;
+import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -13,8 +16,11 @@ import android.widget.Toast;
 
 import com.example.ShortsTrack.MainActivity;
 
+import com.example.ShortsTrack.Module.Users;
 import com.example.ShortsTrack.databinding.ActivitySignUpBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.button.MaterialButton;
 import com.google.firebase.auth.AuthResult;
@@ -48,6 +54,7 @@ public class SignUpActivity extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(), MainActivity.class));
         }
         sign_up.setOnClickListener(view -> {
+            progressBar.setVisibility(View.VISIBLE);
             final  String User_name = use_name.getText().toString().trim();
             final  String User_email = use_email.getText().toString().trim();
             final  String User_cmpswd = use_cmpassword.getText().toString().trim();
@@ -81,8 +88,25 @@ public class SignUpActivity extends AppCompatActivity {
                 @Override
                 public
                 void onComplete(@NonNull Task<AuthResult> task) {
+                    progressBar.setVisibility(View.GONE);
                     if (task.isSuccessful()){
                         Toast.makeText(SignUpActivity.this, "User Register Successfull", Toast.LENGTH_SHORT).show();
+                        Users users = new Users(User_name,User_email,task.getResult().getUser().getUid(),"",0);
+                        String id = mAuth.getCurrentUser().getUid();
+                        database.getReference().child("user/"+id).setValue(users).addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public
+                            void onSuccess(Void unused) {
+                                Toast.makeText(SignUpActivity.this, "Successfull", Toast.LENGTH_SHORT).show();
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public
+                            void onFailure(@NonNull Exception e) {
+                                Toast.makeText(SignUpActivity.this, "Fail due to "+e.getMessage(), Toast.LENGTH_SHORT).show();
+                                Log.e(TAG, "onFailure: 0 "+e.getMessage() );
+                            }
+                        });
                         startActivity(new Intent(getApplicationContext(),MainActivity.class));
 
                     }
@@ -116,5 +140,6 @@ public class SignUpActivity extends AppCompatActivity {
         progressBar = binding.signUpProgressBar;
         mAuth = FirebaseAuth.getInstance();
         firebaseUser = mAuth.getCurrentUser();;
+        database = FirebaseDatabase.getInstance();
     }
 }

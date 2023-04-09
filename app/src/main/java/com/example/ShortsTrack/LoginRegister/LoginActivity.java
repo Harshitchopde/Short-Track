@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 import com.example.ShortsTrack.MainActivity;
 
@@ -47,6 +48,7 @@ ActivityLoginBinding binding;
 
        initvariable();
         sign_in.setOnClickListener(view -> {
+            progressBar.setVisibility(View.VISIBLE);
             final  String User_email = use_email_enter.getText().toString().trim();
             final  String User_pswd = use_password_enter.getText().toString().trim();
 
@@ -68,6 +70,7 @@ ActivityLoginBinding binding;
                 @Override
                 public
                 void onComplete(@NonNull Task<AuthResult> task) {
+                    progressBar.setVisibility(View.GONE);
                     if (task.isSuccessful()){
                         Toast.makeText(LoginActivity.this, "User Login Successfull", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(getApplicationContext(), MainActivity.class));
